@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<style>
+  .Dark{
+background-color: black;
+color: white;
+}
+  .Light{
+    background-color: white;
+    color: black;
+  }
+  .poetry{
+    font-family: "Noto Nastaliq Urdu", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+    font-size: large;
+    border: 1px solid rosybrown;
+    margin-left: 30vw;
+    width: 22vw;
+    display: none;
+    padding: 15px;
+  }
+  #Dark, #Light {
+   display: inline;
+   margin-top: 10px;
+  }
+  .iqbal{
+    font-family: "Noto Nastaliq Urdu", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin-left: 29vw;
+  }
+  
+</style>
+<body>
+    <header>
+        <button id="Dark">Dark Mode</button>
+        <button id="Light">Light Mode</button>
+
+        <label for="Name">Name</label>
+        <input type="text" id="myInput">
+    </header>
+
+    <div class="iqbal">
+        <h3>لب پہ آتی ہے دعا بن کے تمنا میری<span style="color: crimson; font-size: medium;"> (علامہ اقبال) </span></h3>
+        <h4 style="color: darkred;"></h4>
+
+        <button id="see">see more</button>
+    </div>
+     
+    <div class="poetry">
+        <p>
+            لب پہ آتی ہے دعا بن کے تمنا میری <br>
+            
+            زندگی شمع کی صورت ہو خدایا میری <br> 
+            
+            دور دنیا کا مرے دم سے اندھیرا ہو جائے <br>
+            
+            ہر جگہ میرے چمکنے سے اجالا ہو جائے <br>
+            
+            ہو مرے دم سے یونہی میرے وطن کی زینت <br>
+            
+            جس طرح پھول سے ہوتی ہے چمن کی زینت <br>
+            
+            زندگی ہو مری پروانے کی صورت یارب <br>
+            
+            علم کی شمع سے ہو مجھ کو محبت یارب <br>
+            
+            ہو مرا کام غریبوں کی حمایت کرنا <br>
+            
+            درد مندوں سے ضعیفوں سے محبت کرنا <br>
+            
+            مرے اللہ! برائی سے بچانا مجھ کو <br>
+            
+            نیک جو راہ ہو اس رہ پہ چلانا مجھ کو <br>
+                </p>
+    </div>
+
+            <script src="https://code.jquery.com/jquery-3.7.1.js" 
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+            crossorigin="anonymous"></script>
+</body>
+<script>
+  
+    $(document).ready(function () {
+
+        $("#Dark").click(function (e) {
+
+            $("body").removeClass("Light");
+
+            $("body").addClass("Dark");
+        });
+
+        $("#Light").click(function (e) {
+
+            $("body").addClass("Light");
+
+            $("body").removeClass("Dark");
+        });
+
+      $("#see").click(function () {
+        $(".poetry").fadeToggle(700);
+       
+        });
+        
+        $("#myInput").focus(function () {
+    $("#myInput").css({ "background-color": "antiquewhite" });
+  });
+
+  $("#myInput").blur(function () {
+    $("#myInput").css({ "background-color": "bisque" });
+  });
+      });
+</script>
+</html>
